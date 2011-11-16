@@ -4,7 +4,7 @@ require 'capybara'
 require 'capybara/dsl'
 require 'test/unit'
 
-class FirstTest < Test::Unit::TestCase
+class TherapistControllerTest < Test::Unit::TestCase
   include Capybara::DSL
   # # Capybara.default_driver = :selenium # <-- use Selenium driver
 
@@ -13,12 +13,10 @@ class FirstTest < Test::Unit::TestCase
   end
 
   def test_it_works
-    visit '/'
-    #puts ">>> page content = #{page.body}"
-    assert page.has_content?('hello world')
+    visit '/therapist'
   end
 
   def test_is_test
-    assert_true($TEST)
+    assert_equal(true, $TEST)
   end
 end

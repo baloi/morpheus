@@ -2,19 +2,18 @@ require 'sinatra'
 require './model'
 
 get '/' do
-  therapist = Therapist.create(:name => 'baloi')
   "hello world"
 end
 
 get '/therapists' do
-  therapists = Therapist.find(:all)
-  ret = "" 
+  #therapists = Therapist.find(:all)
+  #ret = "" 
 
-  therapists.each do |t|
-   ret += "Welcome #{t.name}<br/>"
-  end
-    
-  ret
+  #therapists.each do |t|
+  # ret += "Welcome #{t.name}<br/>"
+  #end
+  #  
+  #ret
 end
 
 #post '/therapist' do
