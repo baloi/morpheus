@@ -10,6 +10,11 @@ class TherapistControllerTest < Test::Unit::TestCase
 
   def setup
     Capybara.app = Sinatra::Application.new
+    clear_data
+  end
+
+  def teardown
+    clear_data
   end
 
   def test_it_works
