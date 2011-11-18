@@ -30,6 +30,16 @@ class TherapistTest < Test::Unit::TestCase
     assert_equal(therapist.residents.last.name, n2)
   end
 
+  def test_should_have_caseload
+    therapist = PhysicalTherapist.create(:name => "baloi")
+    caseload = Caseload.create 
+    caseload.therapist = therapist
+    caseload.save
+ 
+    c = Caseload.find(:all).first
+    assert_equal(c.therapist.name, therapist.name)
+    assert_equal(c.therapist.name, therapist.name)
+  end
 
   def test_it_works
     therapist = Therapist.new

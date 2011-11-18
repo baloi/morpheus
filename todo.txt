@@ -1,8 +1,21 @@
 > PM for configuring/planning and AM for coding...
 
-> test should have a different database (refresh after every test)
-> copy activerecord models insto model.rb
-> use sample_models functionality
+> get data from production environment
+> check how much of the data model is done and finish it
+> work on scheduling logic
+> important tests(from play/authentic/spec) :
+  - caseload - add therapist and resident.physical_therapist
+  - resident
+  - therapist 
+  - treatment
+  - user
+
+  - rehab day
+
+D caseload - has treatments (add therapist and resident.physical_therapist)
+D make therapist - resident work (or get data from the rails application)
+D test should have a different database (refresh after every test)
+D copy activerecord models insto model.rb
 
 > simple post/therapist test via Capybara & httpclient
 > simple post/therapist from smalltalk via http (no xml yet) deal with xml only with

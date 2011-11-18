@@ -8,7 +8,7 @@ end
 
 class Therapist < ActiveRecord::Base
   #has_many :residents
-  has_many :treatments
+  has_many :caseloads
 
   #def active_residents
   #  ar = residents.select{|x| x.active == true}
@@ -21,7 +21,6 @@ class Treatment < ActiveRecord::Base
 #  has_many :resident_sessions
 #  has_many :residents, :through => :resident_sessions
 
-  belongs_to :therapist#, :required => false
   belongs_to :resident
   belongs_to :caseload
 #  def self.find_all_groups
@@ -71,6 +70,7 @@ end
 
 class Caseload < ActiveRecord::Base
   has_many :treatments
+  belongs_to :therapist
 end
 
 class OccupationalTherapist < Therapist
