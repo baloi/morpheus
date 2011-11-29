@@ -1,5 +1,16 @@
 > PM for configuring/planning and AM for coding...
 
+> authentic will be for entering data and morpheus will be for showing data
+  {focus only on schedule creation and editing like from excel - this will
+   be the server software which may be accessed via web or via thin client}
+> work: compare schema of tinker/morpheus/development.db 
+    and play/authentic (or application running in old PC)
+> test if we can use a database from another source set :database
+  set :database, 'sqlite://experimental.db' => {../../}
+
+
+> rehab_day tests...
+
 > get data from production environment
 > check how much of the data model is done and finish it
 > work on scheduling logic
