@@ -13,7 +13,19 @@ class CaseloadTest < Test::Unit::TestCase
   end
 
   def test_should_belong_to_a_therapist
-    pend # this item is pending
+    pt = PhysicalTherapist.create(:name => 'baloi')
+
+    caseload = Caseload.create 
+    t1 = PTTreatment.create(:description => "a PT Treatment session")
+    t2 = PTTreatment.create(:description => "another PT Treatment session")
+    caseload.treatments << t1
+    caseload.treatments << t2
+    caseload.therapist = pt 
+    caseload.save
+ 
+    assert_equal(caseload.therapist.name, pt.name)
+    assert_equal(pt.caseloads.first.id, caseload.id)
+  
   end
 
   def test_should_have_one_or_many_treatments

@@ -13,6 +13,16 @@ class TreatmentTest < Test::Unit::TestCase
   end
 
   def test_should_belong_to_a_caseload
-    pend 
+    treatment = PTTreatment.create(:description => "just a PT Treatment session")
+    caseload = Caseload.create 
+
+    treatment.caseload = caseload
+    treatment.save
+ 
+    t = Treatment.find(:first)
+
+    assert_equal(t.caseload.id, caseload.id)
+    assert_equal(caseload.treatments.first.description, t.description)
+
   end
 end
