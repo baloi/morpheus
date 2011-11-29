@@ -5,6 +5,9 @@
    be the server software which may be accessed via web or via thin client}
 > work: compare schema of tinker/morpheus/development.db 
     and play/authentic (or application running in old PC)
+  ==> Make this run in old PC alongside the authentic project....
+      !! SHARING THE SAME DATABASE
+
 > test if we can use a database from another source set :database
   set :database, 'sqlite://experimental.db' => {../../}
 
