@@ -2,7 +2,7 @@
 
 > authentic will be for entering data and morpheus will be for showing data
   {focus only on schedule creation and editing like from excel - this will
-   be the server software which may be accessed via web or via thin client}
+   be the server software which may be accessed via web or via thin client} -- migrate database in old PC
 > work: compare schema of tinker/morpheus/development.db 
     and play/authentic (or application running in old PC)
   ==> Make this run in old PC alongside the authentic project....
